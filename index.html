@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration & Preferences</title>
+</head>
+<body>
+  <h1>User Registration & Preferences</h1>
+
+  <form method="post" action="#" autocomplete="on" target="_blank">
+    
+    <!-- Personal Information -->
+    <fieldset>
+      <legend>Personal Information</legend>
+      
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="firstname" autofocus><br><br>
+      
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lastname" readonly value="Test"><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" min="1950-01-01" max="2020-12-31"><br><br>
+      
+      <label for="color">Favorite Color:</label>
+      <input type="color" id="color" name="favcolor"><br><br>
+      
+      <label for="profilepic">Upload Profile Picture:</label>
+      <input type="file" id="profilepic" name="profilepic"><br><br>
+    </fieldset>
+
+    <!-- Preferences -->
+    <fieldset>
+      <legend>Preferences</legend>
+      
+      <p>Favorite Web Language:</p>
+      <input type="radio" id="html" name="language" value="HTML">
+      <label for="html">HTML</label><br>
+      
+      <input type="radio" id="css" name="language" value="CSS">
+      <label for="css">CSS</label><br>
+      
+      <input type="radio" id="js" name="language" value="JavaScript">
+      <label for="js">JavaScript</label><br><br>
+      
+      <p>Devices You Own:</p>
+      <input type="checkbox" id="bike" name="device" value="Bike">
+      <label for="bike">Bike</label><br>
+      
+      <input type="checkbox" id="car" name="device" value="Car">
+      <label for="car">Car</label><br>
+      
+      <input type="checkbox" id="boat" name="device" value="Boat">
+      <label for="boat">Boat</label><br><br>
+      
+      <label for="carselect">Choose Your Car:</label><br>
+      <select name="cars" id="carselect" size="4" multiple>
+        <option value="toyota">Toyota</option>
+        <option value="honda">Honda</option>
+        <option value="ford">Ford</option>
+        <option value="tesla">Tesla</option>
+      </select><br><br>
+
+      <label for="time">Available Time:</label>
+      <input type="time" id="time" name="availtime"><br><br>
+    </fieldset>
+
+    <!-- Feedback & Settings -->
+    <fieldset>
+      <legend>Feedback & Settings</legend>
+      
+      <label for="feedback">Feedback:</label><br>
+      <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+      
+      <label for="satisfaction">Satisfaction Level:</label>
+      <input type="range" id="satisfaction" name="satisfaction" min="0" max="100" oninput="output.value = satisfaction.value">
+      <output id="output">50</output><br><br>
+      
+      <label for="countrycode">Country Code:</label>
+      <input type="text" id="countrycode" name="countrycode" pattern="[A-Z]{3}" placeholder="e.g. PAK"><br><br>
+      
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="18" max="100"><br><br>
+
+      <label for="birthmonth">Select Month:</label>
+      <input type="month" id="birthmonth" name="birthmonth"><br><br>
+    </fieldset>
+
+    <!-- Buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <button type="button" onclick="alert('Thank you for visiting!')">Click Me</button>
+  </form>
+
+</body>
+</html>
